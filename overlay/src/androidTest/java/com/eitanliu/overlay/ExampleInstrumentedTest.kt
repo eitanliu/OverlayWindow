@@ -1,4 +1,4 @@
-package com.eitanliu.overlays
+package com.eitanliu.overlay
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

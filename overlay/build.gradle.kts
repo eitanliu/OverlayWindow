@@ -7,7 +7,7 @@ plugins {
 }
 
 android {
-    namespace = "com.eitanliu.overlays"
+    namespace = "com.eitanliu.overlay"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
@@ -45,7 +45,8 @@ dependencies {
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
-    implementation(libs.material)
+    api(libs.androidx.startup.runtime)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

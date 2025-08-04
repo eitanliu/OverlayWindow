@@ -1,4 +1,4 @@
-package com.eitanliu.overlays
+package com.eitanliu.overlay
 
 import org.junit.Test
 
