@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 
 // rootProject.name = "OverlayWindow"
 include(":app")
+include(":overlay")

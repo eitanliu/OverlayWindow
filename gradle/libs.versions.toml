@@ -1,5 +1,9 @@
 [versions]
 agp = "8.8.2"
+android-compileSdk = "36"
+android-targetSdk = "36"
+android-minSdk = "24"
+jvm = "11"
 kotlin = "2.1.21"
 coreKtx = "1.16.0"
 junit = "4.14-SNAPSHOT"
@@ -11,6 +15,14 @@ activity = "1.10.1"
 constraintlayout = "2.2.1"
 
 [libraries]
+
+# https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-stdlib
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
+kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlin" }
+kotlin-stdlib-jdk8 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk8", version.ref = "kotlin" }
+kotlin-reflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
+# https://kotlinlang.org/api/kotlinx-metadata-jvm/
+kotlinx-metadata = { module = "org.jetbrains.kotlin:kotlin-metadata-jvm", version.ref = "kotlin" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
@@ -23,4 +35,5 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 
