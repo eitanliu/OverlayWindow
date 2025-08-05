@@ -16,12 +16,15 @@ import androidx.annotation.CallSuper
 
 open class OverlayWindow(
     open val view: View,
+    open val windowManager: WindowManager = systemWindowManager
 ) {
 
     companion object {
         const val PRIVATE_FLAG_NO_MOVE_ANIMATION = 1 shl 6
         private const val AREA_VIEW_COLOR = Color.TRANSPARENT
         private const val AREA_VIEW_SIZE = 1
+
+        val systemWindowManager get() = OverlayInitializer.context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
 
         private val safeAreaGlobalLayoutListener = ViewTreeObserver.OnGlobalLayoutListener {
             safeAreaHandler.updateSafeArea(safeArea)
@@ -96,8 +99,6 @@ open class OverlayWindow(
     }
 
     val context: Context get() = view.context
-
-    val windowManager = context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
 
     var safeAreaChangeListener: OnSafeAreaChangeListener? = null
 
