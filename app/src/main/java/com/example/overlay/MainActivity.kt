@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.button2.setOnClickListener {
-
+            startActivity<TestActivity>()
         }
     }
 
